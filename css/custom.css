@@ -1,0 +1,57 @@
+/* ==========================================================================
+   МяуМаркет — собственные стили поверх Bootstrap
+   Подключается ПОСЛЕ bootstrap.min.css, чтобы правила могли его переопределять
+   ========================================================================== */
+
+/* --- 1. Фирменные переменные проекта --- */
+:root {
+  --brand: #2e7d6b;
+  --brand-dark: #1f5c4e;
+  --brand-accent: #e8833a;
+  --brand-cream: #f3f0ea;
+}
+
+/* --- 2. Утилиты с фирменным цветом (которых нет в Bootstrap) --- */
+.bg-brand { background-color: var(--brand) !important; }
+.text-brand { color: var(--brand) !important; }
+
+.btn-brand {
+  background-color: var(--brand);
+  border-color: var(--brand);
+  color: #fff;
+}
+.btn-brand:hover,
+.btn-brand:focus {
+  background-color: var(--brand-dark);
+  border-color: var(--brand-dark);
+  color: #fff;
+}
+
+/* --- 3. Hero-блок: фоновое изображение с затемняющим слоем --- */
+.hero {
+  background-image:
+    linear-gradient(rgba(31, 92, 78, .55), rgba(31, 92, 78, .55)),
+    url("../images/hero-bg.svg");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
+/* --- 4. Доработка карточек товара поверх .card --- */
+.product-card {
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 .75rem 1.5rem rgba(0, 0, 0, .12);
+}
+.product-card .card-img-top {
+  height: 190px;
+  object-fit: contain;
+  background-color: var(--brand-cream);
+}
+
+/* --- 5. Мелкие уточнения --- */
+.navbar-brand { font-weight: 700; letter-spacing: .3px; }
+footer a { text-decoration: none; }
+footer a:hover { text-decoration: underline; }

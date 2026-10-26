@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="МяуМаркет — интернет-магазин товаров для кошек: лежанки, когтеточки, корма, игрушки и аксессуары.">
+  <title>МяуМаркет — товары для кошек</title>
+
+  <!-- Bootstrap подключён локально, ДО собственных стилей -->
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+
+  <!-- ====================== NAVBAR ====================== -->
+  <nav class="navbar navbar-expand-lg bg-brand sticky-top" data-bs-theme="dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">🐾 МяуМаркет</a>
+
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse" data-bs-target="#mainNav"
+              aria-controls="mainNav" aria-expanded="false"
+              aria-label="Открыть меню">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Главная</a></li>
+          <li class="nav-item"><a class="nav-link" href="catalog.html">Каталог</a></li>
+          <li class="nav-item"><a class="nav-link" href="product.html">Товар</a></li>
+          <li class="nav-item"><a class="nav-link" href="order.html">Заявка</a></li>
+        </ul>
+        <button class="btn btn-outline-light ms-lg-3"
+                data-bs-toggle="modal" data-bs-target="#orderModal">
+          Быстрый заказ
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ====================== HERO ====================== -->
+    <section class="hero py-5">
+      <div class="container py-lg-5">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-7">
+            <h1 class="display-5 fw-bold">Всё для счастливой кошки</h1>
+            <p class="lead mb-4">
+              Лежанки, когтеточки, корма и аксессуары от проверенных производителей.
+              Доставим по городу за один день.
+            </p>
+            <div class="d-flex flex-wrap gap-2">
+              <a href="catalog.html" class="btn btn-light btn-lg">Перейти в каталог</a>
+              <button class="btn btn-outline-light btn-lg"
+                      data-bs-toggle="modal" data-bs-target="#orderModal">
+                Оставить заявку
+              </button>
+            </div>
+          </div>
+        <div class="col-lg-5 text-center d-none d-lg-block">
+            <img src="images/hero-cats.svg" class="img-fluid" width="520" height="278"
+                 alt="Четыре котёнка: один спит, другой играет с клубком ниток">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== ПРЕИМУЩЕСТВА ====================== -->
+    <section class="py-5">
+      <div class="container">
+        <h2 class="h3 mb-4">Почему у нас</h2>
+        <div class="row g-4">
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card h-100 border-0 bg-light">
+              <div class="card-body">
+                <h3 class="h6 text-brand">Доставка за день</h3>
+                <p class="card-text small mb-0">По городу — в день заказа, по области — за двое суток.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card h-100 border-0 bg-light">
+              <div class="card-body">
+                <h3 class="h6 text-brand">Проверенные бренды</h3>
+                <p class="card-text small mb-0">Работаем напрямую с производителями, без серого импорта.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card h-100 border-0 bg-light">
+              <div class="card-body">
+                <h3 class="h6 text-brand">Возврат 30 дней</h3>
+                <p class="card-text small mb-0">Не подошло питомцу — вернём деньги без лишних вопросов.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card h-100 border-0 bg-light">
+              <div class="card-body">
+                <h3 class="h6 text-brand">Совет ветеринара</h3>
+                <p class="card-text small mb-0">Поможем подобрать корм и аксессуары под возраст и породу.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== ПОПУЛЯРНЫЕ ТОВАРЫ ====================== -->
+    <section class="py-5 bg-light" id="popular">
+      <div class="container">
+        <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 gap-2">
+          <h2 class="h3 mb-0">Популярные товары</h2>
+          <a href="catalog.html" class="btn btn-sm btn-outline-secondary">Весь каталог</a>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+          <div class="col">
+            <article class="card h-100 product-card position-relative">
+              <span class="badge text-bg-warning position-absolute top-0 end-0 m-2">Хит</span>
+              <img src="images/cat-bed.svg" class="card-img-top p-3" alt="Закрытый домик-лежанка для кошки">
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h6">Домик-лежанка «Иглу»</h3>
+                <p class="card-text small text-secondary">
+                  Закрытый домик из плотного войлока с мягкой подушкой внутри. Держит форму, стирается в машинке.
+                </p>
+                <p class="fs-5 fw-bold mt-auto mb-3">2 790 ₽</p>
+                <div class="d-flex gap-2">
+                  <a href="product.html" class="btn btn-outline-secondary btn-sm">Подробнее</a>
+                  <button class="btn btn-brand btn-sm" data-bs-toggle="modal" data-bs-target="#orderModal"
+                          data-product="Домик-лежанка «Иглу»">Заказать</button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col">
+            <article class="card h-100 product-card position-relative">
+              <span class="badge text-bg-success position-absolute top-0 end-0 m-2">Новинка</span>
+              <img src="images/scratching-post.svg" class="card-img-top p-3" alt="Когтеточка-столбик с верхней площадкой">
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h6">Когтеточка-столбик с площадкой</h3>
+                <p class="card-text small text-secondary">
+                  Столбик в джутовой оплётке на устойчивом основании, сверху площадка для отдыха и игрушка на шнурке.
+                </p>
+                <p class="fs-5 fw-bold mt-auto mb-3">1 890 ₽</p>
+                <div class="d-flex gap-2">
+                  <a href="product.html" class="btn btn-outline-secondary btn-sm">Подробнее</a>
+                  <button class="btn btn-brand btn-sm" data-bs-toggle="modal" data-bs-target="#orderModal"
+                          data-product="Когтеточка-столбик с площадкой">Заказать</button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col">
+            <article class="card h-100 product-card position-relative">
+              <span class="badge text-bg-warning position-absolute top-0 end-0 m-2">Хит</span>
+              <img src="images/fountain.svg" class="card-img-top p-3" alt="Автопоилка-фонтанчик для кошек">
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h6">Автопоилка-фонтанчик, 2 л</h3>
+                <p class="card-text small text-secondary">
+                  Циркуляция и угольный фильтр: вода остаётся свежей, кошка пьёт охотнее. Резервуар 2 литра.
+                </p>
+                <p class="fs-5 fw-bold mt-auto mb-3">2 340 ₽</p>
+                <div class="d-flex gap-2">
+                  <a href="product.html" class="btn btn-outline-secondary btn-sm">Подробнее</a>
+                  <button class="btn btn-brand btn-sm" data-bs-toggle="modal" data-bs-target="#orderModal"
+                          data-product="Автопоилка-фонтанчик, 2 л">Заказать</button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col">
+            <article class="card h-100 product-card position-relative">
+              <img src="images/carrier.svg" class="card-img-top p-3" alt="Переноска-рюкзак с прозрачным иллюминатором">
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h6">Переноска-рюкзак с иллюминатором</h3>
+                <p class="card-text small text-secondary">
+                  Жёсткий каркас, прозрачный иллюминатор и вентиляция по бокам. Для кошек весом до 7 кг.
+                </p>
+                <p class="fs-5 fw-bold mt-auto mb-3">3 190 ₽</p>
+                <div class="d-flex gap-2">
+                  <a href="product.html" class="btn btn-outline-secondary btn-sm">Подробнее</a>
+                  <button class="btn btn-brand btn-sm" data-bs-toggle="modal" data-bs-target="#orderModal"
+                          data-product="Переноска-рюкзак с иллюминатором">Заказать</button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col">
+            <article class="card h-100 product-card position-relative">
+              <span class="badge text-bg-danger position-absolute top-0 end-0 m-2">Скидка</span>
+              <img src="images/dry-food.svg" class="card-img-top p-3" alt="Упаковка сухого корма для кошек">
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h6">Корм сухой для взрослых кошек, 2 кг</h3>
+                <p class="card-text small text-secondary">
+                  Полнорационный корм с курицей и рисом, без искусственных красителей и ароматизаторов.
+                </p>
+                <p class="fs-5 fw-bold mt-auto mb-3">
+                  1 150 ₽ <span class="text-secondary text-decoration-line-through fs-6 fw-normal">1 390 ₽</span>
+                </p>
+                <div class="d-flex gap-2">
+                  <a href="product.html" class="btn btn-outline-secondary btn-sm">Подробнее</a>
+                  <button class="btn btn-brand btn-sm" data-bs-toggle="modal" data-bs-target="#orderModal"
+                          data-product="Корм сухой для взрослых кошек, 2 кг">Заказать</button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col">
+            <article class="card h-100 product-card position-relative">
+              <img src="images/teaser.svg" class="card-img-top p-3" alt="Игрушка-дразнилка с перьями на удочке">
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h6">Игрушка-дразнилка с перьями</h3>
+                <p class="card-text small text-secondary">
+                  Телескопическая удочка с натуральными перьями и бубенчиком. Складывается до 30 см.
+                </p>
+                <p class="fs-5 fw-bold mt-auto mb-3">290 ₽</p>
+                <div class="d-flex gap-2">
+                  <a href="product.html" class="btn btn-outline-secondary btn-sm">Подробнее</a>
+                  <button class="btn btn-brand btn-sm" data-bs-toggle="modal" data-bs-target="#orderModal"
+                          data-product="Игрушка-дразнилка с перьями">Заказать</button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ====================== ПОДВАЛ ====================== -->
+  <footer class="bg-dark text-white-50 py-4 mt-0">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-12 col-md-5">
+          <p class="h5 text-white mb-2">🐾 МяуМаркет</p>
+          <p class="small mb-0">Интернет-магазин товаров для кошек. Работаем с 2024 года.</p>
+        </div>
+        <div class="col-6 col-md-3">
+          <p class="text-white mb-2">Разделы</p>
+          <ul class="list-unstyled small mb-0">
+            <li><a class="link-light" href="catalog.html">Каталог</a></li>
+            <li><a class="link-light" href="order.html">Оставить заявку</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-4">
+          <p class="text-white mb-2">Контакты</p>
+          <ul class="list-unstyled small mb-0">
+            <li>+7 (900) 000-00-00</li>
+            <li>hello@myawmarket.ru</li>
+            <li>Ростов-на-Дону, ул. Пушкинская, 1</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-secondary">
+      <p class="small mb-0">© 2026 МяуМаркет. Учебный проект, РТУ МИРЭА.</p>
+    </div>
+  </footer>
+
+  <!-- ====================== МОДАЛЬНОЕ ОКНО ЗАЯВКИ ====================== -->
+  <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h2 class="modal-title h5" id="orderModalLabel">Быстрая заявка</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+        </div>
+
+                <form id="quickOrderForm" novalidate>
+          <div class="modal-body">
+
+            <div class="alert alert-success d-none" id="orderSuccess" role="alert">
+              Заявка отправлена! Мы перезвоним в течение часа.
+            </div>
+
+            <!-- Имя и фамилия рядом на широком экране, в столбик на узком -->
+            <div class="row g-3 mb-3">
+              <div class="col-12 col-sm-6">
+                <label for="quickName" class="form-label">Имя</label>
+                <input type="text" class="form-control" id="quickName" name="firstName"
+                       required minlength="2" placeholder="Александр">
+                <div class="invalid-feedback">Укажите имя, минимум 2 символа.</div>
+              </div>
+              <div class="col-12 col-sm-6">
+                <label for="quickSurname" class="form-label">Фамилия</label>
+                <input type="text" class="form-control" id="quickSurname" name="lastName"
+                       required minlength="2" placeholder="Рожко">
+                <div class="invalid-feedback">Укажите фамилию, минимум 2 символа.</div>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="quickPhone" class="form-label">Телефон</label>
+              <div class="input-group">
+                <span class="input-group-text">+7</span>
+                <input type="tel" class="form-control" id="quickPhone" name="phone"
+                       required pattern="[0-9]{10}" inputmode="numeric" placeholder="9000000000">
+                <div class="invalid-feedback">Введите 10 цифр без пробелов и скобок.</div>
+              </div>
+            </div>
+
+            <!-- Несколько товаров в одной заявке -->
+            <fieldset class="mb-3">
+              <legend class="form-label fs-6 mb-2">Товары в заявке</legend>
+              <div class="border rounded p-2 overflow-auto" style="max-height: 170px;">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="products"
+                         id="prod1" value="Домик-лежанка «Иглу»">
+                  <label class="form-check-label small" for="prod1">Домик-лежанка «Иглу» — 2 790 ₽</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="products"
+                         id="prod2" value="Когтеточка-столбик с площадкой">
+                  <label class="form-check-label small" for="prod2">Когтеточка-столбик с площадкой — 1 890 ₽</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="products"
+                         id="prod3" value="Автопоилка-фонтанчик, 2 л">
+                  <label class="form-check-label small" for="prod3">Автопоилка-фонтанчик, 2 л — 2 340 ₽</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="products"
+                         id="prod4" value="Переноска-рюкзак с иллюминатором">
+                  <label class="form-check-label small" for="prod4">Переноска-рюкзак с иллюминатором — 3 190 ₽</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="products"
+                         id="prod5" value="Корм сухой для взрослых кошек, 2 кг">
+                  <label class="form-check-label small" for="prod5">Корм сухой для взрослых кошек, 2 кг — 1 150 ₽</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="products"
+                         id="prod6" value="Игрушка-дразнилка с перьями">
+                  <label class="form-check-label small" for="prod6">Игрушка-дразнилка с перьями — 290 ₽</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="products"
+                         id="prod7" value="Миска двойная на подставке">
+                  <label class="form-check-label small" for="prod7">Миска двойная на подставке — 690 ₽</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="products"
+                         id="prod8" value="Лоток закрытый с фильтром">
+                  <label class="form-check-label small" for="prod8">Лоток закрытый с фильтром — 2 450 ₽</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="products"
+                         id="prod9" value="Туннель игровой мягкий">
+                  <label class="form-check-label small" for="prod9">Туннель игровой мягкий — 990 ₽</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="products"
+                         id="prod10" value="Шлейка с поводком">
+                  <label class="form-check-label small" for="prod10">Шлейка с поводком — 740 ₽</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="products"
+                         id="prod11" value="Щётка-фурминатор">
+                  <label class="form-check-label small" for="prod11">Щётка-фурминатор — 1 290 ₽</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="products"
+                         id="prod12" value="Когтерез с ограничителем">
+                  <label class="form-check-label small" for="prod12">Когтерез с ограничителем — 390 ₽</label>
+                </div>
+              </div>
+              <p class="text-danger small mt-1 mb-0 d-none" id="productsError">
+                Отметьте хотя бы один товар.
+              </p>
+              <p class="text-secondary small mt-1 mb-0" id="productsCount">Выбрано товаров: 0</p>
+            </fieldset>
+
+            <div class="mb-3">
+              <label for="quickDelivery" class="form-label">Способ получения</label>
+              <select class="form-select" id="quickDelivery" name="delivery" required>
+                <option value="">Выберите способ</option>
+                <option>Самовывоз из магазина</option>
+                <option>Доставка курьером по городу</option>
+                <option>Пункт выдачи</option>
+                <option>Транспортная компания</option>
+              </select>
+              <div class="invalid-feedback">Выберите, как вам удобно получить заказ.</div>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="quickAgree" name="agreement" required>
+              <label class="form-check-label small" for="quickAgree">
+                Согласен на обработку персональных данных
+              </label>
+              <div class="invalid-feedback">Без согласия заявку отправить нельзя.</div>
+            </div>
+
+          </div>
+
+          <div class="modal-footer">
+            <button type="reset" class="btn btn-outline-secondary">Очистить</button>
+            <button type="submit" class="btn btn-brand">Отправить заявку</button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS Bundle — нужен для navbar-collapse и modal -->
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
