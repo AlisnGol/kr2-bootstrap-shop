@@ -55,3 +55,32 @@
 .navbar-brand { font-weight: 700; letter-spacing: .3px; }
 footer a { text-decoration: none; }
 footer a:hover { text-decoration: underline; }
+
+/* --- 6. Галерея товара (carousel) --- */
+.carousel-item img {
+  height: 320px;
+  object-fit: contain;
+  background-color: var(--brand-cream);
+}
+
+/* точки-индикаторы: по умолчанию белые и на светлом фоне не видны */
+.carousel-indicators [data-bs-target] {
+  background-color: var(--brand);
+  height: 6px;
+  border-radius: 3px;
+}
+
+/* --- 7. Вкладки с характеристиками --- */
+.nav-tabs .nav-link { color: var(--brand-dark); }
+.nav-tabs .nav-link.active { color: var(--brand); font-weight: 600; }
+
+/* --- 8. Пагинация и акцентные ссылки в фирменном цвете --- */
+.page-link { color: var(--brand); }
+.page-item.active .page-link {
+  background-color: var(--brand);
+  border-color: var(--brand);
+}
+.accordion-button:not(.collapsed) {
+  color: var(--brand-dark);
+  background-color: var(--brand-cream);
+}

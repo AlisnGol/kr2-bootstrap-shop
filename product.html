@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Домик-лежанка «Иглу» для кошек: войлок 8 мм, съёмная подушка, три цвета. Доставка за один день.">
+  <title>Домик-лежанка «Иглу» — МяуМаркет</title>
+
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+
+  <!-- ====================== NAVBAR ====================== -->
+  <nav class="navbar navbar-expand-lg bg-brand sticky-top" data-bs-theme="dark">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <img src="images/logo.svg" width="32" height="31" alt="">
+        МяуМаркет
+      </a>
+
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse" data-bs-target="#mainNav"
+              aria-controls="mainNav" aria-expanded="false"
+              aria-label="Открыть меню">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+          <li class="nav-item"><a class="nav-link" href="catalog.html">Каталог</a></li>
+          <li class="nav-item"><a class="nav-link" href="order.html">Заявка</a></li>
+        </ul>
+        <button class="btn btn-outline-light ms-lg-3"
+                data-bs-toggle="modal" data-bs-target="#orderModal">
+          Быстрый заказ
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="py-4">
+    <div class="container">
+
+      <nav aria-label="Хлебные крошки">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+          <li class="breadcrumb-item"><a href="catalog.html">Каталог</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Домик-лежанка «Иглу»</li>
+        </ol>
+      </nav>
+
+      <div class="row g-4 g-lg-5">
+
+        <div class="col-12 col-lg-6">
+
+          <!-- Галерея: carousel — дополнительный компонент Bootstrap -->
+          <div id="productGallery" class="carousel slide border rounded bg-white" data-bs-ride="carousel">
+
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#productGallery" data-bs-slide-to="0"
+                      class="active" aria-current="true" aria-label="Зелёный"></button>
+              <button type="button" data-bs-target="#productGallery" data-bs-slide-to="1"
+                      aria-label="Серый"></button>
+              <button type="button" data-bs-target="#productGallery" data-bs-slide-to="2"
+                      aria-label="Песочный"></button>
+            </div>
+
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/cat-bed.svg" class="d-block w-100 p-4" alt="Домик-лежанка «Иглу», зелёный">
+                <div class="carousel-caption d-none d-md-block">
+                  <p class="badge text-bg-dark mb-0">Зелёный</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="images/cat-bed-grey.svg" class="d-block w-100 p-4" alt="Домик-лежанка «Иглу», серый">
+                <div class="carousel-caption d-none d-md-block">
+                  <p class="badge text-bg-dark mb-0">Серый</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="images/cat-bed-sand.svg" class="d-block w-100 p-4" alt="Домик-лежанка «Иглу», песочный">
+                <div class="carousel-caption d-none d-md-block">
+                  <p class="badge text-bg-dark mb-0">Песочный</p>
+                </div>
+              </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button"
+                    data-bs-target="#productGallery" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon bg-dark rounded-circle" aria-hidden="true"></span>
+              <span class="visually-hidden">Предыдущее фото</span>
+            </button>
+            <button class="carousel-control-next" type="button"
+                    data-bs-target="#productGallery" data-bs-slide="next">
+              <span class="carousel-control-next-icon bg-dark rounded-circle" aria-hidden="true"></span>
+              <span class="visually-hidden">Следующее фото</span>
+            </button>
+          </div>
+
+        </div>
+
+        <div class="col-12 col-lg-6">
+          <span class="badge text-bg-warning mb-2">Хит продаж</span>
+          <h1 class="h2">Домик-лежанка «Иглу»</h1>
+
+          <p class="d-flex align-items-baseline gap-2 mt-3">
+            <span class="fs-2 fw-bold">2 790 ₽</span>
+            <span class="fs-5 text-secondary text-decoration-line-through">3 200 ₽</span>
+            <span class="badge text-bg-danger">−13%</span>
+          </p>
+
+          <div class="alert alert-success py-2" role="alert">
+            В наличии на складе — отгрузим сегодня
+          </div>
+
+          <p class="text-secondary">
+            Закрытый домик для кошек, которые предпочитают спать в укрытии.
+            Держит форму, стирается в машинке, не линяет.
+          </p>
+
+          <ul class="list-unstyled">
+            <li class="mb-1">Войлок 8 мм — корпус не складывается</li>
+            <li class="mb-1">Съёмная подушка на синтепоне</li>
+            <li class="mb-1">Для кошек весом до 7 кг</li>
+            <li class="mb-1">Три цвета на выбор</li>
+          </ul>
+
+          <div class="mb-3" style="max-width: 220px;">
+            <label for="productColor" class="form-label">Цвет</label>
+            <select class="form-select" id="productColor">
+              <option>Зелёный</option>
+              <option>Серый</option>
+              <option>Песочный</option>
+            </select>
+          </div>
+
+          <div class="mb-4" style="max-width: 220px;">
+            <label for="productQty" class="form-label">Количество</label>
+            <div class="input-group">
+              <span class="input-group-text">шт.</span>
+              <input type="number" class="form-control" id="productQty" value="1" min="1" max="10">
+            </div>
+          </div>
+
+          <div class="d-flex flex-wrap gap-2">
+            <button class="btn btn-brand btn-lg" data-bs-toggle="modal" data-bs-target="#orderModal"
+                    data-product="Домик-лежанка «Иглу»">Заказать</button>
+            <a href="order.html" class="btn btn-outline-secondary btn-lg">Подробная заявка</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Вкладки: ещё один дополнительный компонент -->
+      <ul class="nav nav-tabs mt-5" id="productTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="tab-desc" data-bs-toggle="tab"
+                  data-bs-target="#pane-desc" type="button" role="tab"
+                  aria-controls="pane-desc" aria-selected="true">Описание</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="tab-specs" data-bs-toggle="tab"
+                  data-bs-target="#pane-specs" type="button" role="tab"
+                  aria-controls="pane-specs" aria-selected="false">Характеристики</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="tab-delivery" data-bs-toggle="tab"
+                  data-bs-target="#pane-delivery" type="button" role="tab"
+                  aria-controls="pane-delivery" aria-selected="false">Доставка и оплата</button>
+        </li>
+      </ul>
+
+      <div class="tab-content border border-top-0 rounded-bottom p-4" id="productTabsContent">
+
+        <div class="tab-pane fade show active" id="pane-desc" role="tabpanel" aria-labelledby="tab-desc">
+          <p>
+            «Иглу» — закрытый домик для кошек, которые любят спать в укрытии. Корпус держит форму
+            за счёт плотного войлока толщиной 8 мм: домик не складывается, когда питомец запрыгивает внутрь.
+          </p>
+          <p class="mb-0">
+            Внутри съёмная подушка на синтепоне. И подушка, и сам корпус стираются в машинке
+            при 30 градусах, форма после стирки сохраняется. Вход рассчитан на кошек весом до 7 кг.
+          </p>
+        </div>
+
+        <div class="tab-pane fade" id="pane-specs" role="tabpanel" aria-labelledby="tab-specs">
+          <table class="table table-striped align-middle mb-0">
+            <caption>Технические характеристики домика-лежанки «Иглу»</caption>
+            <tbody>
+              <tr><th scope="row" class="w-50">Материал корпуса</th><td>Войлок 8 мм</td></tr>
+              <tr><th scope="row">Наполнитель подушки</th><td>Синтепон, 200 г/м²</td></tr>
+              <tr><th scope="row">Размер</th><td>46 × 42 × 40 см</td></tr>
+              <tr><th scope="row">Диаметр входа</th><td>22 см</td></tr>
+              <tr><th scope="row">Максимальный вес питомца</th><td>до 7 кг</td></tr>
+              <tr><th scope="row">Уход</th><td>Машинная стирка при 30 °C</td></tr>
+              <tr><th scope="row">Цвета</th><td>Зелёный, серый, песочный</td></tr>
+              <tr><th scope="row">Гарантия</th><td>12 месяцев</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="tab-pane fade" id="pane-delivery" role="tabpanel" aria-labelledby="tab-delivery">
+          <ul class="mb-0">
+            <li>Курьером по городу — в день заказа при оформлении до 15:00, 250 ₽.</li>
+            <li>Пункт выдачи — на следующий день, бесплатно от 2 000 ₽.</li>
+            <li>Транспортная компания по области — 2 рабочих дня.</li>
+            <li>Оплата картой при получении или онлайн.</li>
+            <li>Возврат в течение 30 дней, если товар не подошёл питомцу.</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <h2 class="h4 mt-5 mb-3">Рекомендуем к этому товару</h2>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+          <div class="col">
+            <article class="card h-100 product-card position-relative">
+              <span class="badge text-bg-warning position-absolute top-0 end-0 m-2">Хит</span>
+              <img src="images/fountain.svg" class="card-img-top p-3" alt="Автопоилка-фонтанчик для кошек">
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h6">Автопоилка-фонтанчик, 2 л</h3>
+                <p class="card-text small text-secondary">Циркуляция и угольный фильтр: вода остаётся свежей весь день.</p>
+                <p class="fs-5 fw-bold mt-auto mb-3">2 340 ₽</p>
+                <div class="d-flex gap-2">
+                  <a href="product.html" class="btn btn-outline-secondary btn-sm">Подробнее</a>
+                  <button class="btn btn-brand btn-sm" data-bs-toggle="modal" data-bs-target="#orderModal"
+                          data-product="Автопоилка-фонтанчик, 2 л">Заказать</button>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col">
+            <article class="card h-100 product-card position-relative">
+              <img src="images/tunnel.svg" class="card-img-top p-3" alt="Мягкий игровой туннель для кошки">
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h6">Туннель игровой мягкий</h3>
+                <p class="card-text small text-secondary">Складывается в кольцо, шуршащая прослойка внутри.</p>
+                <p class="fs-5 fw-bold mt-auto mb-3">990 ₽</p>
+                <div class="d-flex gap-2">
+                  <a href="product.html" class="btn btn-outline-secondary btn-sm">Подробнее</a>
+                  <button class="btn btn-brand btn-sm" data-bs-toggle="modal" data-bs-target="#orderModal"
+                          data-product="Туннель игровой мягкий">Заказать</button>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col">
+            <article class="card h-100 product-card position-relative">
+              <span class="badge text-bg-warning position-absolute top-0 end-0 m-2">Хит</span>
+              <img src="images/furminator.svg" class="card-img-top p-3" alt="Щётка-фурминатор для вычёсывания подшёрстка">
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h6">Щётка-фурминатор</h3>
+                <p class="card-text small text-secondary">Убирает подшёрсток без вреда для остевого волоса.</p>
+                <p class="fs-5 fw-bold mt-auto mb-3">1 290 ₽</p>
+                <div class="d-flex gap-2">
+                  <a href="product.html" class="btn btn-outline-secondary btn-sm">Подробнее</a>
+                  <button class="btn btn-brand btn-sm" data-bs-toggle="modal" data-bs-target="#orderModal"
+                          data-product="Щётка-фурминатор">Заказать</button>
+                </div>
+              </div>
+            </article>
+          </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ====================== ПОДВАЛ ====================== -->
+  <footer class="bg-dark text-white-50 py-4">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-12 col-md-5">
+          <p class="h5 text-white mb-2 d-flex align-items-center gap-2">
+            <img src="images/logo.svg" width="28" height="27" alt="">
+            МяуМаркет
+          </p>
+          <p class="small mb-0">Интернет-магазин товаров для кошек. Работаем с 2026 года.</p>
+        </div>
+        <div class="col-6 col-md-3">
+          <p class="text-white mb-2">Разделы</p>
+          <ul class="list-unstyled small mb-0">
+            <li><a class="link-light" href="catalog.html">Каталог</a></li>
+            <li><a class="link-light" href="order.html">Оставить заявку</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-4">
+          <p class="text-white mb-2">Контакты</p>
+          <ul class="list-unstyled small mb-0">
+            <li>+7 (900) 000-00-00</li>
+            <li>hello@myawmarket.ru</li>
+            <li>Москва, ул. Тверская, 10</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-secondary">
+      <p class="small mb-0">© 2026 МяуМаркет. Учебный проект, РТУ МИРЭА.</p>
+    </div>
+  </footer>
+
+  <!-- ====================== МОДАЛЬНОЕ ОКНО ЗАЯВКИ ====================== -->
+  <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h2 class="modal-title h5" id="orderModalLabel">Быстрая заявка</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+        </div>
+
+        <form id="quickOrderForm" novalidate>
+          <div class="modal-body">
+
+            <div class="alert alert-success d-none" id="orderSuccess" role="alert">
+              Заявка отправлена! Мы перезвоним в течение часа.
+            </div>
+
+            <div class="row g-3 mb-3">
+              <div class="col-12 col-sm-6">
+                <label for="quickName" class="form-label">Имя</label>
+                <input type="text" class="form-control" id="quickName" name="firstName"
+                       required minlength="2" placeholder="Алиса">
+                <div class="invalid-feedback">Укажите имя, минимум 2 символа.</div>
+              </div>
+              <div class="col-12 col-sm-6">
+                <label for="quickSurname" class="form-label">Фамилия</label>
+                <input type="text" class="form-control" id="quickSurname" name="lastName"
+                       required minlength="2" placeholder="Голикова">
+                <div class="invalid-feedback">Укажите фамилию, минимум 2 символа.</div>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="quickPhone" class="form-label">Телефон</label>
+              <div class="input-group">
+                <span class="input-group-text">+7</span>
+                <input type="tel" class="form-control" id="quickPhone" name="phone"
+                       required pattern="[0-9]{10}" inputmode="numeric" placeholder="9000000000">
+                <div class="invalid-feedback">Введите 10 цифр без пробелов и скобок.</div>
+              </div>
+            </div>
+
+            <fieldset class="mb-3">
+              <legend class="form-label fs-6 mb-2">Товары в заявке</legend>
+              <div class="border rounded p-2 overflow-auto" style="max-height: 170px;">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="products"
+                         id="prod1" value="Домик-лежанка «Иглу»">
+                  <label class="form-check-label small" for="prod1">Домик-лежанка «Иглу» — 2 790 ₽</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="products"
+                         id="prod2" value="Когтеточка-столбик с площадкой">
+                  <label class="form-check-label small" for="prod2">Когтеточка-столбик с площадкой — 1 890 ₽</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="products"
+                         id="prod3" value="Автопоилка-фонтанчик, 2 л">
+                  <label class="form-check-label small" for="prod3">Автопоилка-фонтанчик, 2 л — 2 340 ₽</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="products"
+                         id="prod4" value="Переноска-рюкзак с иллюминатором">
+                  <label class="form-check-label small" for="prod4">Переноска-рюкзак с иллюминатором — 3 190 ₽</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="products"
+                         id="prod5" value="Корм сухой для взрослых кошек, 2 кг">
+                  <label class="form-check-label small" for="prod5">Корм сухой для взрослых кошек, 2 кг — 1 150 ₽</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="products"
+                         id="prod6" value="Игрушка-дразнилка с перьями">
+                  <label class="form-check-label small" for="prod6">Игрушка-дразнилка с перьями — 290 ₽</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="products"
+                         id="prod7" value="Миска двойная на подставке">
+                  <label class="form-check-label small" for="prod7">Миска двойная на подставке — 690 ₽</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="products"
+                         id="prod8" value="Лоток закрытый с фильтром">
+                  <label class="form-check-label small" for="prod8">Лоток закрытый с фильтром — 2 450 ₽</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="products"
+                         id="prod9" value="Туннель игровой мягкий">
+                  <label class="form-check-label small" for="prod9">Туннель игровой мягкий — 990 ₽</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="products"
+                         id="prod10" value="Шлейка с поводком">
+                  <label class="form-check-label small" for="prod10">Шлейка с поводком — 740 ₽</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="products"
+                         id="prod11" value="Щётка-фурминатор">
+                  <label class="form-check-label small" for="prod11">Щётка-фурминатор — 1 290 ₽</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="products"
+                         id="prod12" value="Когтерез с ограничителем">
+                  <label class="form-check-label small" for="prod12">Когтерез с ограничителем — 390 ₽</label>
+                </div>
+              </div>
+              <p class="text-danger small mt-1 mb-0 d-none" id="productsError">
+                Отметьте хотя бы один товар.
+              </p>
+              <p class="text-secondary small mt-1 mb-0" id="productsCount">Выбрано товаров: 0</p>
+            </fieldset>
+
+            <div class="mb-3">
+              <label for="quickDelivery" class="form-label">Способ получения</label>
+              <select class="form-select" id="quickDelivery" name="delivery" required>
+                <option value="">Выберите способ</option>
+                <option>Самовывоз из магазина</option>
+                <option>Доставка курьером по городу</option>
+                <option>Пункт выдачи</option>
+                <option>Транспортная компания</option>
+              </select>
+              <div class="invalid-feedback">Выберите, как вам удобно получить заказ.</div>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="quickAgree" name="agreement" required>
+              <label class="form-check-label small" for="quickAgree">
+                Согласен на обработку персональных данных
+              </label>
+              <div class="invalid-feedback">Без согласия заявку отправить нельзя.</div>
+            </div>
+
+          </div>
+
+          <div class="modal-footer">
+            <button type="reset" class="btn btn-outline-secondary">Очистить</button>
+            <button type="submit" class="btn btn-brand">Отправить заявку</button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

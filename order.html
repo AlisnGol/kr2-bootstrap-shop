@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Оставьте заявку в МяуМаркете: выберите товары, укажите контакты и способ получения.">
+  <title>Оформление заявки — МяуМаркет</title>
+
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+
+  <!-- ====================== NAVBAR ====================== -->
+  <nav class="navbar navbar-expand-lg bg-brand sticky-top" data-bs-theme="dark">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <img src="images/logo.svg" width="32" height="31" alt="">
+        МяуМаркет
+      </a>
+
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse" data-bs-target="#mainNav"
+              aria-controls="mainNav" aria-expanded="false"
+              aria-label="Открыть меню">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+          <li class="nav-item"><a class="nav-link" href="catalog.html">Каталог</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="order.html">Заявка</a></li>
+        </ul>
+        <button class="btn btn-outline-light ms-lg-3"
+                data-bs-toggle="modal" data-bs-target="#orderModal">
+          Быстрый заказ
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="py-4">
+    <div class="container">
+
+      <nav aria-label="Хлебные крошки">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Заявка</li>
+        </ol>
+      </nav>
+
+      <h1 class="h2 mb-4">Оформление заявки</h1>
+
+      <div class="row g-4">
+
+        <!-- Форма: 8 колонок из 12 на десктопе -->
+        <div class="col-12 col-lg-8">
+          <form id="orderPageForm" novalidate>
+
+            <div class="alert alert-success d-none" id="orderPageSuccess" role="alert">
+              Заявка принята! Менеджер свяжется с вами в течение часа.
+            </div>
+
+            <!-- Контактные данные -->
+            <fieldset class="card mb-4">
+              <div class="card-body">
+                <legend class="h5 card-title">Контактные данные</legend>
+
+                <div class="row g-3">
+                  <div class="col-12 col-md-6">
+                    <label for="orderName" class="form-label">Имя</label>
+                    <input type="text" class="form-control" id="orderName" name="firstName"
+                           required minlength="2" placeholder="Алиса">
+                    <div class="invalid-feedback">Укажите имя, минимум 2 символа.</div>
+                  </div>
+
+                  <div class="col-12 col-md-6">
+                    <label for="orderSurname" class="form-label">Фамилия</label>
+                    <input type="text" class="form-control" id="orderSurname" name="lastName"
+                           required minlength="2" placeholder="Голикова">
+                    <div class="invalid-feedback">Укажите фамилию, минимум 2 символа.</div>
+                  </div>
+
+                  <div class="col-12 col-md-6">
+                    <label for="orderEmail" class="form-label">Электронная почта</label>
+                    <div class="input-group">
+                      <span class="input-group-text">@</span>
+                      <input type="email" class="form-control" id="orderEmail" name="email"
+                             required placeholder="name@example.com">
+                      <div class="invalid-feedback">Введите корректный адрес почты.</div>
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-md-6">
+                    <label for="orderPhone" class="form-label">Телефон</label>
+                    <div class="input-group">
+                      <span class="input-group-text">+7</span>
+                      <input type="tel" class="form-control" id="orderPhone" name="phone"
+                             required pattern="[0-9]{10}" inputmode="numeric" placeholder="9000000000">
+                      <div class="invalid-feedback">Введите 10 цифр без пробелов и скобок.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+
+            <!-- Состав заявки -->
+            <fieldset class="card mb-4">
+              <div class="card-body">
+                <legend class="h5 card-title">Состав заявки</legend>
+                <p class="text-secondary small">Отметьте все товары, которые хотите заказать.</p>
+
+                <div class="row g-2">
+                  <div class="col-12 col-md-6">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="products"
+                             id="orderProd1" value="Домик-лежанка «Иглу»">
+                      <label class="form-check-label small" for="orderProd1">
+                        Домик-лежанка «Иглу» — 2 790 ₽
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="products"
+                             id="orderProd2" value="Когтеточка-столбик с площадкой">
+                      <label class="form-check-label small" for="orderProd2">
+                        Когтеточка-столбик с площадкой — 1 890 ₽
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="products"
+                             id="orderProd3" value="Автопоилка-фонтанчик, 2 л">
+                      <label class="form-check-label small" for="orderProd3">
+                        Автопоилка-фонтанчик, 2 л — 2 340 ₽
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="products"
+                             id="orderProd4" value="Переноска-рюкзак с иллюминатором">
+                      <label class="form-check-label small" for="orderProd4">
+                        Переноска-рюкзак с иллюминатором — 3 190 ₽
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="products"
+                             id="orderProd5" value="Корм сухой для взрослых кошек, 2 кг">
+                      <label class="form-check-label small" for="orderProd5">
+                        Корм сухой для взрослых кошек, 2 кг — 1 150 ₽
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="products"
+                             id="orderProd6" value="Игрушка-дразнилка с перьями">
+                      <label class="form-check-label small" for="orderProd6">
+                        Игрушка-дразнилка с перьями — 290 ₽
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="products"
+                             id="orderProd7" value="Миска двойная на подставке">
+                      <label class="form-check-label small" for="orderProd7">
+                        Миска двойная на подставке — 690 ₽
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="products"
+                             id="orderProd8" value="Лоток закрытый с фильтром">
+                      <label class="form-check-label small" for="orderProd8">
+                        Лоток закрытый с фильтром — 2 450 ₽
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="products"
+                             id="orderProd9" value="Туннель игровой мягкий">
+                      <label class="form-check-label small" for="orderProd9">
+                        Туннель игровой мягкий — 990 ₽
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="products"
+                             id="orderProd10" value="Шлейка с поводком">
+                      <label class="form-check-label small" for="orderProd10">
+                        Шлейка с поводком — 740 ₽
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="products"
+                             id="orderProd11" value="Щётка-фурминатор">
+                      <label class="form-check-label small" for="orderProd11">
+                        Щётка-фурминатор — 1 290 ₽
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="products"
+                             id="orderProd12" value="Когтерез с ограничителем">
+                      <label class="form-check-label small" for="orderProd12">
+                        Когтерез с ограничителем — 390 ₽
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <p class="text-danger small mt-2 mb-0 d-none" id="orderPageError">
+                  Отметьте хотя бы один товар.
+                </p>
+                <p class="text-secondary small mt-2 mb-0" id="orderPageCount">Выбрано товаров: 0</p>
+              </div>
+            </fieldset>
+
+            <!-- Доставка -->
+            <fieldset class="card mb-4">
+              <div class="card-body">
+                <legend class="h5 card-title">Доставка</legend>
+
+                <div class="row g-3">
+                  <div class="col-12 col-md-6">
+                    <label for="orderDelivery" class="form-label">Способ получения</label>
+                    <select class="form-select" id="orderDelivery" name="delivery" required>
+                      <option value="">Выберите способ</option>
+                      <option>Самовывоз из магазина</option>
+                      <option>Доставка курьером по городу</option>
+                      <option>Пункт выдачи</option>
+                      <option>Транспортная компания</option>
+                    </select>
+                    <div class="invalid-feedback">Выберите способ получения.</div>
+                  </div>
+
+                  <div class="col-12 col-md-6">
+                    <label for="orderDate" class="form-label">Желаемая дата</label>
+                    <input type="date" class="form-control" id="orderDate" name="date">
+                  </div>
+
+                  <div class="col-12">
+                    <label for="orderAddress" class="form-label">Адрес или пункт выдачи</label>
+                    <input type="text" class="form-control" id="orderAddress" name="address"
+                           placeholder="Москва, ул. Тверская, 10">
+                  </div>
+
+                  <div class="col-12">
+                    <label for="orderComment" class="form-label">Комментарий</label>
+                    <textarea class="form-control" id="orderComment" name="comment" rows="3"
+                              placeholder="Например: позвонить за час до доставки"></textarea>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+
+            <div class="form-check mb-4">
+              <input class="form-check-input" type="checkbox" id="orderAgree" name="agreement" required>
+              <label class="form-check-label" for="orderAgree">
+                Согласен на обработку персональных данных
+              </label>
+              <div class="invalid-feedback">Без согласия заявку отправить нельзя.</div>
+            </div>
+
+            <div class="d-flex flex-wrap gap-2">
+              <button type="submit" class="btn btn-brand btn-lg">Отправить заявку</button>
+              <button type="reset" class="btn btn-outline-secondary btn-lg">Очистить форму</button>
+            </div>
+
+          </form>
+        </div>
+
+        <!-- Боковая колонка: 4 из 12 -->
+        <aside class="col-12 col-lg-4">
+          <div class="card mb-4">
+            <div class="card-body">
+              <h2 class="h5 card-title">Как это работает</h2>
+              <ol class="list-group list-group-numbered list-group-flush">
+                <li class="list-group-item px-0">Вы оставляете заявку</li>
+                <li class="list-group-item px-0">Менеджер звонит и подтверждает состав</li>
+                <li class="list-group-item px-0">Мы собираем и отправляем заказ</li>
+                <li class="list-group-item px-0">Оплата при получении или онлайн</li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="alert alert-info" role="alert">
+            <p class="fw-semibold mb-1">Бесплатная доставка</p>
+            <p class="mb-0 small">При заказе от 2 000 ₽ доставка до пункта выдачи бесплатно.</p>
+          </div>
+
+          <div class="card">
+            <div class="card-body">
+              <h2 class="h6 card-title">Нужна помощь с выбором?</h2>
+              <p class="small text-secondary mb-2">
+                Подскажем размер лежанки и подберём корм под возраст питомца.
+              </p>
+              <p class="mb-0"><a class="text-brand" href="tel:+79000000000">+7 (900) 000-00-00</a></p>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ====================== ПОДВАЛ ====================== -->
+  <footer class="bg-dark text-white-50 py-4">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-12 col-md-5">
+          <p class="h5 text-white mb-2 d-flex align-items-center gap-2">
+            <img src="images/logo.svg" width="28" height="27" alt="">
+            МяуМаркет
+          </p>
+          <p class="small mb-0">Интернет-магазин товаров для кошек. Работаем с 2026 года.</p>
+        </div>
+        <div class="col-6 col-md-3">
+          <p class="text-white mb-2">Разделы</p>
+          <ul class="list-unstyled small mb-0">
+            <li><a class="link-light" href="catalog.html">Каталог</a></li>
+            <li><a class="link-light" href="order.html">Оставить заявку</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-4">
+          <p class="text-white mb-2">Контакты</p>
+          <ul class="list-unstyled small mb-0">
+            <li>+7 (900) 000-00-00</li>
+            <li>hello@myawmarket.ru</li>
+            <li>Москва, ул. Тверская, 10</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-secondary">
+      <p class="small mb-0">© 2026 МяуМаркет. Учебный проект, РТУ МИРЭА.</p>
+    </div>
+  </footer>
+
+  <!-- ====================== МОДАЛЬНОЕ ОКНО ЗАЯВКИ ====================== -->
+  <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h2 class="modal-title h5" id="orderModalLabel">Быстрая заявка</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+        </div>
+
+        <form id="quickOrderForm" novalidate>
+          <div class="modal-body">
+
+            <div class="alert alert-success d-none" id="orderSuccess" role="alert">
+              Заявка отправлена! Мы перезвоним в течение часа.
+            </div>
+
+            <div class="row g-3 mb-3">
+              <div class="col-12 col-sm-6">
+                <label for="quickName" class="form-label">Имя</label>
+                <input type="text" class="form-control" id="quickName" name="firstName"
+                       required minlength="2" placeholder="Алиса">
+                <div class="invalid-feedback">Укажите имя, минимум 2 символа.</div>
+              </div>
+              <div class="col-12 col-sm-6">
+                <label for="quickSurname" class="form-label">Фамилия</label>
+                <input type="text" class="form-control" id="quickSurname" name="lastName"
+                       required minlength="2" placeholder="Голикова">
+                <div class="invalid-feedback">Укажите фамилию, минимум 2 символа.</div>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="quickPhone" class="form-label">Телефон</label>
+              <div class="input-group">
+                <span class="input-group-text">+7</span>
+                <input type="tel" class="form-control" id="quickPhone" name="phone"
+                       required pattern="[0-9]{10}" inputmode="numeric" placeholder="9000000000">
+                <div class="invalid-feedback">Введите 10 цифр без пробелов и скобок.</div>
+              </div>
+            </div>
+
+            <fieldset class="mb-3">
+              <legend class="form-label fs-6 mb-2">Товары в заявке</legend>
+              <div class="border rounded p-2 overflow-auto" style="max-height: 170px;">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="products"
+                         id="prod1" value="Домик-лежанка «Иглу»">
+                  <label class="form-check-label small" for="prod1">Домик-лежанка «Иглу» — 2 790 ₽</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="products"
+                         id="prod2" value="Когтеточка-столбик с площадкой">
+                  <label class="form-check-label small" for="prod2">Когтеточка-столбик с площадкой — 1 890 ₽</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="products"
+                         id="prod3" value="Автопоилка-фонтанчик, 2 л">
+                  <label class="form-check-label small" for="prod3">Автопоилка-фонтанчик, 2 л — 2 340 ₽</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="products"
+                         id="prod4" value="Переноска-рюкзак с иллюминатором">
+                  <label class="form-check-label small" for="prod4">Переноска-рюкзак с иллюминатором — 3 190 ₽</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="products"
+                         id="prod5" value="Корм сухой для взрослых кошек, 2 кг">
+                  <label class="form-check-label small" for="prod5">Корм сухой для взрослых кошек, 2 кг — 1 150 ₽</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="products"
+                         id="prod6" value="Игрушка-дразнилка с перьями">
+                  <label class="form-check-label small" for="prod6">Игрушка-дразнилка с перьями — 290 ₽</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="products"
+                         id="prod7" value="Миска двойная на подставке">
+                  <label class="form-check-label small" for="prod7">Миска двойная на подставке — 690 ₽</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="products"
+                         id="prod8" value="Лоток закрытый с фильтром">
+                  <label class="form-check-label small" for="prod8">Лоток закрытый с фильтром — 2 450 ₽</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="products"
+                         id="prod9" value="Туннель игровой мягкий">
+                  <label class="form-check-label small" for="prod9">Туннель игровой мягкий — 990 ₽</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="products"
+                         id="prod10" value="Шлейка с поводком">
+                  <label class="form-check-label small" for="prod10">Шлейка с поводком — 740 ₽</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="products"
+                         id="prod11" value="Щётка-фурминатор">
+                  <label class="form-check-label small" for="prod11">Щётка-фурминатор — 1 290 ₽</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="products"
+                         id="prod12" value="Когтерез с ограничителем">
+                  <label class="form-check-label small" for="prod12">Когтерез с ограничителем — 390 ₽</label>
+                </div>
+              </div>
+              <p class="text-danger small mt-1 mb-0 d-none" id="productsError">
+                Отметьте хотя бы один товар.
+              </p>
+              <p class="text-secondary small mt-1 mb-0" id="productsCount">Выбрано товаров: 0</p>
+            </fieldset>
+
+            <div class="mb-3">
+              <label for="quickDelivery" class="form-label">Способ получения</label>
+              <select class="form-select" id="quickDelivery" name="delivery" required>
+                <option value="">Выберите способ</option>
+                <option>Самовывоз из магазина</option>
+                <option>Доставка курьером по городу</option>
+                <option>Пункт выдачи</option>
+                <option>Транспортная компания</option>
+              </select>
+              <div class="invalid-feedback">Выберите, как вам удобно получить заказ.</div>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="quickAgree" name="agreement" required>
+              <label class="form-check-label small" for="quickAgree">
+                Согласен на обработку персональных данных
+              </label>
+              <div class="invalid-feedback">Без согласия заявку отправить нельзя.</div>
+            </div>
+
+          </div>
+
+          <div class="modal-footer">
+            <button type="reset" class="btn btn-outline-secondary">Очистить</button>
+            <button type="submit" class="btn btn-brand">Отправить заявку</button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
